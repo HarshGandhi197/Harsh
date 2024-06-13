@@ -26,7 +26,7 @@ const getAccessToken = async () => {
     }
 };
 
-app.get('/salesforce/contacts', async (req, res) => {
+app.get('*', async (req, res) => {
     try {
         const tokenData = await getAccessToken();
         const instanceUrl = tokenData.instance_url;
